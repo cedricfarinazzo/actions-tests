@@ -1,0 +1,18 @@
+name: cache test
+
+on: [push]
+
+jobs:
+  cache-test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: cache test
+      run: |
+        echo $RUNNER_TOOL_CACHE
+        ls  $RUNNER_TOOL_CACHE
+        tree -h  $RUNNER_TOOL_CACHE
+        touch cache.test
+        cp cache.test "$RUNNER_TOOL_CACHE"
