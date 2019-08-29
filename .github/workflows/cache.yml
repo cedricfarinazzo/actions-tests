@@ -10,13 +10,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     
-    - name: cache test : cache dir
+    - name: cache test - cache dir
       run: echo $RUNNER_TOOL_CACHE
-    - name: cache test : cache dir
+    - name: cache test - cache dir
       run: ls  $RUNNER_TOOL_CACHE
-    - name: cache test : cache dir
+    - name: cache test - cache dir
       run: tree -h  $RUNNER_TOOL_CACHE
-    - name: cache test : test file
+    - name: cache test - test file
       run: touch cache.test
-    - name: cache test : test file
+    - name: cache test - test file
       run: cp cache.test "$RUNNER_TOOL_CACHE"
