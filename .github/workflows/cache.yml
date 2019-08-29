@@ -15,7 +15,9 @@ jobs:
     - name: cache test - cache dir
       run: ls  $RUNNER_TOOL_CACHE
     - name: cache test - cache dir
-      run: tree -h  $RUNNER_TOOL_CACHE
+      run: |
+        sudo apt install tree
+        tree -h  $RUNNER_TOOL_CACHE
     - name: cache test - test file
       run: touch cache.test
     - name: cache test - test file
