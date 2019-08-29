@@ -19,7 +19,7 @@ jobs:
         sudo apt install tree
         tree -h  $RUNNER_TOOL_CACHE
     - name: cache test - test file
-      run: ls cache.test || echo "Cache test file not found !"
+      run: ls  "$RUNNER_TOOL_CACHE/cache.test" || echo "Cache test file not found !"
     - name: cache test - test file
       run: touch cache.test
     - name: cache test - test file
